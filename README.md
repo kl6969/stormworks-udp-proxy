@@ -1,8 +1,8 @@
 # stormworks-udp-proxy
 
-![Python](https://img.shields.io/badge/python-3.8+-blue) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey) ![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/python-3.8+-ff69b4?style=flat&logo=python&logoColor=white) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-ff1493?style=flat) ![License](https://img.shields.io/badge/license-MIT-e91e8c?style=flat) ![Version](https://img.shields.io/badge/version-v1.6.0-ff69b4?style=flat)
 
-Fixes Stormworks dedicated servers randomly disappearing from the server browser by forcing Steam to connect via **UDP** instead of WebSockets.
+Fixes Stormworks dedicated servers randomly becoming unjoinable by forcing Steam to always connect via **UDP** instead of WebSockets.
 
 ---
 
@@ -10,7 +10,7 @@ Fixes Stormworks dedicated servers randomly disappearing from the server browser
 
 Steam's CM directory API (`ISteamDirectory/GetCMListForConnect`) returns a list of connection servers containing roughly 95–97% WebSocket entries and 3–5% UDP (Netfilter) entries. Steam picks a connection type by rolling a random number against that ratio on every boot.
 
-When Steam picks **WebSockets**, the Stormworks dedicated server becomes invisible in the server browser and players cannot join — even though the server is running fine. When Steam picks **UDP**, everything works. This makes the server randomly unjoinable with no obvious cause.
+When Steam picks **WebSockets**, the server still appears in the server browser and looks perfectly fine — but players cannot join via the server browser. The only working connection methods are Steam friends list and LAN. When Steam picks **UDP**, server browser joining works normally. This makes the server randomly unjoinable with no obvious cause, since the server appears completely healthy.
 
 ---
 
