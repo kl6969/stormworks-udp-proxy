@@ -1,11 +1,7 @@
 # stormworks-udp-proxy
-Forces Stormworks dedicated servers to connect to Steam via UDP instead of WebSockets, fixing server joining issue's. Intercepts Steam's CM list API and strips WebSocket entries. Works on Windows and Linux.
-
-
-# stormworks-udp-proxy
 
 Fixes Stormworks dedicated servers randomly disappearing from the server browser by forcing Steam to connect via **UDP** instead of WebSockets.
-
+Forces Stormworks dedicated servers to connect to Steam via UDP instead of WebSockets, fixing server joining issue's. Intercepts Steam's CM list API and strips WebSocket entries. Works on Windows and Linux.
 ---
 
 ## The Problem
