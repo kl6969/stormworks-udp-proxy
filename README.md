@@ -1,14 +1,16 @@
 # stormworks-udp-proxy
 
+![Python](https://img.shields.io/badge/python-3.8+-blue) ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey) ![License](https://img.shields.io/badge/license-MIT-green)
+
 Fixes Stormworks dedicated servers randomly disappearing from the server browser by forcing Steam to connect via **UDP** instead of WebSockets.
-Forces Stormworks dedicated servers to connect to Steam via UDP instead of WebSockets, fixing server joining issue's. Intercepts Steam's CM list API and strips WebSocket entries. Works on Windows and Linux.
+
 ---
 
 ## The Problem
 
 Steam's CM directory API (`ISteamDirectory/GetCMListForConnect`) returns a list of connection servers containing roughly 95–97% WebSocket entries and 3–5% UDP (Netfilter) entries. Steam picks a connection type by rolling a random number against that ratio on every boot.
 
-When Steam picks **WebSockets**, the Stormworks dedicated server becomes bugged in the server browser and players cannot join — even though the server is running fine. When Steam picks **UDP**, everything works. Websockets makes the server randomly unjoinable with no obvious cause.
+When Steam picks **WebSockets**, the Stormworks dedicated server becomes invisible in the server browser and players cannot join — even though the server is running fine. When Steam picks **UDP**, everything works. This makes the server randomly unjoinable with no obvious cause.
 
 ---
 
@@ -134,5 +136,3 @@ This is a known Wine/COM quirk when running `server64.exe` under Wine. It is **n
 
 Developed by [Claude](https://claude.ai) (Anthropic) for kl2060  
 Stormworks by Geometa
-
-Angezockt9980 for testing linux stablility / errors and providing information.
