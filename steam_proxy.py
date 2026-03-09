@@ -78,6 +78,11 @@ yq9Oc/8xGi7SIt2oRMtTMiTD1CwiwVgwqgdijeH2kSnT/2ZwZr7YU59FI8z/f0Ko
 7hOzRL8j9sT3YuMCWtWFfVbryjQ=
 -----END CERTIFICATE-----"""
 
+# NOTE: This private key is intentionally embedded and public.
+# It is for a self-signed cert valid only for 127.0.0.1 (localhost redirect).
+# It cannot be used to impersonate any real server on the internet.
+# There is no sensitive account, credential, or identity attached to it.
+
 KEY_PEM = b"""-----BEGIN PRIVATE KEY-----
 MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC6kzWo+RiuxqYa
 jmrEPVErZM5arFleDVgLN5Jf+6R90YWStyd0/4OnwC2IysPZvKprl51QIKyuXpLX
@@ -605,4 +610,5 @@ def main():
         print()
 
 if __name__ == '__main__':
+
     main()
