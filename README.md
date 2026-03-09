@@ -135,5 +135,5 @@ This is a known Wine/COM quirk when running `server64.exe` under Wine. It is **n
 ## Credits
 
 Developed by [Claude](https://claude.ai) (Anthropic) for kl2060  
-Stormworks by Geometa
+Stormworks by Geometa  
 Credit to: Angezockt9980 for providing information and testing Linux compatibility.
